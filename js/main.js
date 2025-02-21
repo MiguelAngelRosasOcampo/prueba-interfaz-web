@@ -1,10 +1,20 @@
-document.addEventListener("DOMContentLoaded", () =>{
-    const contenido = document.getElementById("contenido");
-    const inputContenido = document.getElementById("inputContenido");
-    const botonCambiar = document.getElementById("botonCambiar");
+const inputAgregar = document.getElementById('inputAgregar');
+const botonAgregar = document.getElementById('botonAgregar');
+const contenido = document.getElementById('contenido');
 
-    botonCambiar.addEventListener("click", () =>{
-        contenido.textContent = inputContenido.value;
-    });
-    
-});
+inputAgregar.value = '';
+
+botonAgregar.addEventListener('click', agregarContenido)
+inputAgregar.addEventListener('keydown', (event) =>{
+    if(event.key === 'Enter'){   
+        event.preventDefault();
+        agregarContenido(event);
+        inputAgregar.value = '';
+    }
+
+        
+})
+function agregarContenido()
+{
+    contenido.textContent ? (contenido.textContent += " " + inputAgregar.value) : (contenido.textContent = inputAgregar.value);
+}
