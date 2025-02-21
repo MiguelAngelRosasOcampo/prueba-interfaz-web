@@ -1,0 +1,20 @@
+body
+{
+    text-align: center;
+    background: linear-gradient(90deg, rgb(30, 30, 224), rgb(221, 57, 57));
+}
+
+h1
+{
+    color: rgb(42, 184, 72);
+}
+
+main p
+{
+    color: aqua;
+}
+
+footer p
+{
+    color: rgb(198, 194, 194)
+}
